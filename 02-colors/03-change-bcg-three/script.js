@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
 
-})();
+    document.getElementById("run").addEventListener("click", function () {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+
+        const randomColor = Math.floor(Math.random() * 16777215);
+        toString(16);
+        document.body.style.backgroundColor = color;
+    })
+
+})
+();
