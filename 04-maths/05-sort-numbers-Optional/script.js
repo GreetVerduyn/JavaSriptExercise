@@ -15,8 +15,11 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        let input= document.getElementById("numbers").value;
 
+        let arr = input.split(',').sort(function(a, b){return a - b});
+
+        alert (arr);
     });
 
 })();
