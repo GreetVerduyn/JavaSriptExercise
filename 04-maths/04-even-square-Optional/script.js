@@ -11,9 +11,17 @@
 
 (function() {
 
-    document.getElementById("run").addEventListener("click", function() {
+    const square = (x) => {
+        return Math.pow(x,2);
+    }
 
-        // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        res = [];
+        for (let i = 1; square(i)<21; i++){
+            res.push(square(i));
+        }
+        alert (res);
+
 
     });
 
