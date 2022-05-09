@@ -14,7 +14,25 @@
 
     var performOperation = function(operation) {
         // perform the operation
+        let op1 = parseInt (document.getElementById("op-one").value, 10);
+        let op2 = parseInt (document.getElementById("op-two").value, 10);
+        switch (operation) {
+            case 'addition':
+                alert (op1 + op2);
+                break;
+            case 'substraction':
+                alert (op1 - op2);
+                break;
+            case 'multiplication':
+                alert (op1 * op2);
+                break;
+            case 'division':
+                alert (op1 / op2);
+                break;
+        }
+
     };
+
 
     Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
         $btn.addEventListener("click", function() {
