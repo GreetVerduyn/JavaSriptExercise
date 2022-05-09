@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click",function() {
+
+        const months =["January","February","March","April","May","June","July","August","September","October","November","December"];
+        let inputYear = document.getElementById("year").value;
+        let monthsWithFriday13 = []
+        for (let month = 0; month < 12; month++) {
+            let d = new Date(inputYear, month, 13);
+            if (d.getDay() == 5) {
+                let name = months[d.getMonth()];
+                monthsWithFriday13.push(name);
+            }
+        };
+        alert (monthsWithFriday13)
+    });
+
 
 })();
+
+
