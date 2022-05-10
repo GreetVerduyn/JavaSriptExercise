@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     var people = [
         {
@@ -89,6 +89,15 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        let index = people.findIndex(item => {
+            return (item.lastname === "D" && item.firstname === "Jean" ) ;
+        });
+        console.log(people[index].email);
+        console.log(index);
+
+    })
+
 
 })();
