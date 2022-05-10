@@ -92,7 +92,7 @@
     document.getElementById("run").addEventListener("click", function () {
 
         let index = people.findIndex(item => {
-            return (item.lastname === "D" && item.firstname === "Jean" ) ;
+            return (item.lastname === "Dupont" && item.firstname === "Jean" ) ;
         });
         console.log(people[index].email);
         console.log(index);

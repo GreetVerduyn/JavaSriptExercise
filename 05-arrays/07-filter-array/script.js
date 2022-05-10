@@ -89,6 +89,10 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+      let adults = people.map(person => { return person.valueOf((person.age>18));})
+      console.log(adults);
+    })
 
 })();
