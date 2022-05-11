@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-    //Select the element with the id "target" and replace its content with "owned"
+
     document.getElementById("target").innerHTML="owned";
 
 })();
