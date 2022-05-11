@@ -10,7 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+    
+    const target = document.getElementById("target")
+    const table = document.createElement("table");
+    let tbody = document.createElement("tbody");
 
-    // your code here
+    table.appendChild((tbody));
+
+    let i=0
+
+    for (let i= 0; i<10; i++){
+        let row_i = document.createElement("tr");
+        let row_data = document.createElement("td");
+        row_i.appendChild(row_data);
+        tbody.appendChild(row_i);
+    }
+
+        target.appendChild(table);
 
 })();
