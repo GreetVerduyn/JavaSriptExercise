@@ -11,6 +11,10 @@
 
 (function() {
 
-    // your code here
+    // Select the element with the id "target"
+    // (not using getElementById!) and replace its content with "owned".
+
+//    function changeColor(newColor) {
+    document.querySelector('#target').innerHTML = "owned"
 
 })();
