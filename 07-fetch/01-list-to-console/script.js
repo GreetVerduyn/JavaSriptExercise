@@ -10,5 +10,13 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+    async function getData(){
+        let data = await fetch(
+            'http://localhost:8000/_shared/api.json');
+        let main = await data.json();
+        console.log(main);
+
+    }
+    getData()
+})
+();
