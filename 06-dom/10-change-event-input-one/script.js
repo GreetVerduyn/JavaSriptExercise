@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    // Listen for changes in the input field and display the number of characters
+    // entered in the counter span. As soon as 10 characters have been entered,
+    // don't allow any more characters to be typed
 
+
+
+    let password = document.getElementById('pass-one');
+    let counter = document.getElementById('counter');
+    password.maxLength="10"
+
+    password.addEventListener('input', () => {
+        let passLength = password.value.length;
+        counter.innerHTML = passLength + '/10';
+    })
+    
 })();
