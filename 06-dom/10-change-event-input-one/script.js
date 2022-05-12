@@ -25,5 +25,5 @@
         let passLength = password.value.length;
         counter.innerHTML = passLength + '/10';
     })
-    
+
 })();
