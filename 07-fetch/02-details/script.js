@@ -10,5 +10,28 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const heroesUrl = "./../../_shared/api.json";      //"http://localhost:3000/heroes"
+
+    const dataForm = async () => {
+        const response = await fetch(heroesUrl);
+        const jsonList = await response.json();
+
+        return jsonList.heroes;
+         }
+
+    document.getElementById("run").addEventListener("click", function () {
+        let i = document.getElementById("hero-id").value;
+        let target = document.getElementById("target");
+
+        dataForm()
+            .then((res) => {
+                target.innerHTML = `Congrats you have chosen ${res[i - 1].name}`
+            })
+            .catch((err) => {
+                if (i > 5) {
+                    target.innerHTML = "Sorry, hero not found"
+                }
+            });
+    });
+
 })();
