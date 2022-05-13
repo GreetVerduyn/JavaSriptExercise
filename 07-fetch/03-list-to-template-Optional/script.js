@@ -28,8 +28,8 @@
                for (i; i < res.length; i++) {
                    const item = template.content.cloneNode(true);
                    item.querySelector('.name').innerText = res[i].name;
-                   item.querySelector('.alter-ego').innerText = res[i +1].alterEgo;
-                   item.querySelector('.powers').innerText = res[i +1].abilities;
+                   item.querySelector('.alter-ego').innerText = res[i].alterEgo;
+                   item.querySelector('.powers').innerText = res[i].abilities;
 
                    target.appendChild(item);
                };
