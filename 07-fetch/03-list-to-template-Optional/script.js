@@ -10,5 +10,30 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+   const dataForm = async () => {
+       const response = await fetch ("./../../_shared/api.json");
+       const jsonList = await response.json();
+
+    return jsonList.heroes;
+   }
+
+   document.getElementById('run').addEventListener("click", function (){
+       let i = 0
+       let target = document.getElementById("target");
+       let template = document.getElementById("tpl-hero");
+
+
+       dataForm()
+           .then((res) => {
+               for (i; i < res.length; i++) {
+                   const item = template.content.cloneNode(true);
+                   item.querySelector('.name').innerText = res[i].name;
+                   item.querySelector('.alter-ego').innerText = res[i +1].alterEgo;
+                   item.querySelector('.powers').innerText = res[i +1].abilities;
+
+                   target.appendChild(item);
+               };
+           });
+
+   });
 })();
