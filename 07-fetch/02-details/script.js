@@ -22,10 +22,16 @@
     document.getElementById("run").addEventListener("click", function () {
         let i = document.getElementById("hero-id").value;
         let target = document.getElementById("target");
+        let template = document.getElementById("tpl-hero");
 
         dataForm()
             .then((res) => {
-                target.innerHTML = `Congrats you have chosen ${res[i - 1].name}`
+                const item = template.content.cloneNode(true)
+                item.querySelector('.name').innerText = res[i-1].name;
+                item.querySelector('.alter-ego').innerText = res[i-1].alterEgo;
+                item.querySelector('.powers').innerText = res[i-1].abilities;
+                target.append(item);
+
             })
             .catch((err) => {
                 if (i > 5) {
